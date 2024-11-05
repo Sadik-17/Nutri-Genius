@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+/* home page css */
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Belt Styling */
+  .belt {
+    background-color: #f0d7bd;
+    
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #2f4f6f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Navigation Menu */
+  nav {
+    background-color: #e0f7f9;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #d3e2e3;
+  }
+  
+  .favorite {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Main Content Layout */
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 1;
+    gap: 20px;
+  }
+  
+  /* Left Section for Recipes */
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    margin-left: 50px;
+    gap: 30px;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  
+  }
+  
+  .recipe {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(146, 66, 66, 0.1);
+    text-align: center;
+  }
+  
+  .recipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .recipe h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .recipe .description p {
+    color: #777;
+  }
+  
+  /* Sidebar (Right Section) */
+  .right {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search Box */
+  .search-box-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-post .input-group {
+    display: flex;
+    border-radius: 8px;
+  }
+  
+  .search-post input[type="text"] {
+    width: 100%;
+    margin-left: 60px;
+    padding-left: 25px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .search-post-btn {
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    border: 1px solid #ccc;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 3px;
+    height: 5px;
+    padding: 20px;
+   
+    color: white;
+  }
+  
+  
+  
+  /* Recent Posts Section */
+  .recent {
+    margin-top: 20px;
+  }
+  
+  .recent h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .recent span {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+  
+    .left {
+        grid-template-columns: 1fr;
+    }
+  
+    .right {
+        width: 100%;
+        margin-top: 20px;
+    }
+  }
+
+  /* workout module */
+
+/* Header and Footer styling */
+.header, .footer {
+  background-color: #2f4f6f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Layout styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  background-color: #f4f4f4;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 60px;
+  background-color: #243b54;
+  color: white;
+  height: 100vh;
+  overflow-y: auto;
+  transition: width 0.3s;
+}
+
+.sidebar.show {
+  width: 250px;
+}
+
+.sidebar-content {
+  padding: 10px;
+  display: none;
+}
+
+.sidebar.show .sidebar-content {
+  display: block;
+}
+
+.sidebar h3 {
+  margin-top: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.sidebar ul li {
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #3d5068;
+}
+
+/* Toggle button for burger menu */
+.burger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar.show .burger::after {
+  content: " Categories";
+  font-size: 18px;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.exercise-card {
+  min-width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ccc;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.exercise-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .exercise-card {
+      min-width: 200px;
+      height: 150px;
+  }
+}
